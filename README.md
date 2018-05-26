@@ -31,7 +31,7 @@ import sys
 sys.path.append('/dev/sdb/lgbm/')
 ```
 
-### LGBM.ipynb
+#### LGBM.ipynb
 
 LGBMのインストール～推論までの使用例をまとめたnotebook．Datalab上での使用を想定している．
 
