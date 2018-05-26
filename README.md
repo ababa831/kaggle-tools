@@ -1,6 +1,6 @@
 # kaggle-tools　
 
-Kaggleでよく使うツール置き場です．本ドキュメントでは，ツールの使い方から新たに習得したテクニックまで，順次追加していきます．
+Kaggleでよく使うツール置き場．本ドキュメントでは，ツールの使い方から新たに習得したテクニックまで，順次追加していく．
 
 ## EDA
 
@@ -8,20 +8,39 @@ Kaggleでよく使うツール置き場です．本ドキュメントでは，�
 
 ## Machine learning
 ### LightGBM
-特徴量の重要度をfeature importanceで可視化できるので，他の手法でモデリングするときも役に立つ．
+
+特徴量の重要度をfeature importanceで可視化できるので（下図），他の手法でモデリングするときも役に立つ．
 
 #### 準備
 
-Datalabで使う場合
-- 仮想環境のストレージ容量が気になる場合は，以下のように永続ディスクにインストールし，ディレクトリのパスを指定しておく．
- 
- ```
+CPU版を使用する場合は`$ pip install lightgbm`．GPU版を使いたい場合は[ここ](http://lightgbm.readthedocs.io/en/latest/GPU-Tutorial.html)を参考にする．
 
- ```
+Datalabで使う場合
+- 仮想環境のストレージ容量が気になる場合は，notebook上で以下のように永続ディスクにインストールし，ディレクトリのパスを指定しておく．
+ 
+```
+%bash
+mkdir /dev/sdb/lgbm
+pip install lightgbm -t /dev/sdb/lgbm
+```
+
+```
+import sys
+sys.path.append('/dev/sdb/lgbm/')
+```
 
 ### LGBM.ipynb
 
-LGBMを使うための関数と使用例．
+LGBMのインストール～推論までの使用例をまとめたnotebook．Datalab上での使用を想定している．
+
+
+Lightgbmによる学習と推論を実行を以下のコードで一纏めに行えるようになっている．
+詳細は`LGBM.ipynb`にて．
+
+```
+DO(userows, train_df, test_df, sub_df, predictors, categoricals, debug=0, seed=7, fold_num=4, outs_path=<出力先のディレクトリ>)
+```
+
 
 ### XGBoost
 
