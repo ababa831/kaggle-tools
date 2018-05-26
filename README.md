@@ -9,7 +9,7 @@ Kaggleでよく使うツール置き場．本ドキュメントでは，ツー�
 ## Machine learning
 ### LightGBM
 
-特徴量の重要度をfeature importanceで可視化できるので（下図），他の手法でモデリングするときも役に立つ．
+特徴量の重要度をfeature importanceで可視化できるので（下図），他の手法でモデリングするときにも役に立つ．
 
 ![feature_importance](https://github.com/ababa893/kaggle-tools/blob/imgs/%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89.png?raw=true)
 
@@ -18,7 +18,7 @@ Kaggleでよく使うツール置き場．本ドキュメントでは，ツー�
 CPU版を使用する場合は`$ pip install lightgbm`．GPU版を使いたい場合は[ここ](http://lightgbm.readthedocs.io/en/latest/GPU-Tutorial.html)を参考にする．
 
 ##### Datalabで使う場合
-- 仮想環境のストレージ容量が気になる場合は，notebook上で以下のように永続ディスクにインストールし，ディレクトリのパスを指定しておく．
+- 仮想環境のストレージ容量が気になる場合は，notebook上で以下のようにLGBMを永続ディスクにインストールし，ディレクトリのパスを指定しておく．
  
 ```
 %bash
