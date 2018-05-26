@@ -17,7 +17,7 @@ Kaggleでよく使うツール置き場．本ドキュメントでは，ツー�
 
 CPU版を使用する場合は`$ pip install lightgbm`．GPU版を使いたい場合は[ここ](http://lightgbm.readthedocs.io/en/latest/GPU-Tutorial.html)を参考にする．
 
-##### Datalabで使う場合
+**Datalabで使う場合**
 - 仮想環境のストレージ容量が気になる場合は，notebook上で以下のようにLGBMを永続ディスクにインストールし，ディレクトリのパスを指定しておく．
  
 ```
@@ -40,8 +40,8 @@ Lightgbmによる学習と推論を実行を以下のコードで一纏めに行
 詳細は`LGBM.ipynb`にて．
 
 ```
-DO(userows, train_df, test_df, sub_df, predictors, categoricals,  \
-   debug=0, seed=7, fold_num=4, outs_path=<出力先のディレクトリ>)
+DO(userows, train_df, test_df, sub_df, predictors, categoricals, \
+   targets, debug=0, seed=7, fold_num=4, outs_path="./lgbm_outs/")
 ```
 
 
